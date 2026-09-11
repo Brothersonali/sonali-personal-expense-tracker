@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transactions | Personal Expense Tracker</title>
+
+    <link rel="stylesheet" href="transactions.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo-section">
+            <div class="logo-icon">💰</div>
+            <h2>Expense Tracker</h2>
+        </div>
+
+        <button
+            class="back-btn"
+            onclick="window.location.href='dashboard.html'">
+            ← Dashboard
+        </button>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="transactions-container">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <h1>All Transactions</h1>
+
+            <p>
+                View and manage all your income and expenses.
+            </p>
+
+        </section>
+
+
+        <!-- Filters -->
+        <section class="filter-section">
+
+            <h2>Filter Transactions</h2>
+
+            <div class="filter-controls">
+
+                <!-- Type Filter -->
+                <select id="typeFilter">
+
+                    <option value="">
+                        All Types
+                    </option>
+
+                    <option value="INCOME">
+                        Income
+                    </option>
+
+                    <option value="EXPENSE">
+                        Expense
+                    </option>
+
+                </select>
+
+
+                <!-- Category Filter -->
+                <input
+                    type="text"
+                    id="categoryFilter"
+                    placeholder="Enter category"
+                >
+
+
+                <!-- From Date -->
+                <input
+                    type="date"
+                    id="fromDate"
+                >
+
+
+                <!-- To Date -->
+                <input
+                    type="date"
+                    id="toDate"
+                >
+
+
+                <!-- Apply Filter -->
+                <button id="filterBtn">
+                    Apply Filter
+                </button>
+
+
+                <!-- Clear Filter -->
+                <button id="clearFilterBtn">
+                    Clear
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Transaction List -->
+        <section
+            class="transaction-list"
+            id="transactionList">
+
+            <p class="empty-message">
+                Loading transactions...
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="transactions.js"></script>
+
+</body>
+
+</html>

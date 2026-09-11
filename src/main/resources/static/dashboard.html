@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Personal Expense Tracker</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+
+        <div class="logo-section">
+            <div class="logo-icon">💰</div>
+            <h2>Expense Tracker</h2>
+        </div>
+
+        <button id="logoutBtn">Logout</button>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="dashboard">
+
+        <!-- Welcome -->
+        <section class="welcome-section">
+
+            <div>
+                <p class="small-text">Welcome back 👋</p>
+                <h1>My Dashboard</h1>
+                <p class="description">
+                    Keep track of your income and expenses easily.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Summary Cards -->
+        <section class="summary-section">
+
+            <div class="summary-card balance-card">
+                <p>Total Balance</p>
+                <h2 id="totalBalance">₹0</h2>
+            </div>
+
+            <div class="summary-card income-card">
+                <p>Total Income</p>
+                <h2 id="totalIncome">₹0</h2>
+            </div>
+
+            <div class="summary-card expense-card">
+                <p>Total Expense</p>
+                <h2 id="totalExpense">₹0</h2>
+            </div>
+
+        </section>
+
+
+        <!-- Quick Action -->
+        <section class="action-section">
+
+            <h2>Quick Actions</h2>
+
+            <button id="addTransactionBtn">
+                + Add Transaction
+            </button>
+
+        </section>
+        <!-- Expense Analysis -->
+
+        <section class="chart-section">
+
+            <h2>Expense Analysis</h2>
+
+            <div class="chart-container">
+
+                <div class="chart-bar">
+                    <div id="incomeBar" class="bar income-bar">
+                    </div>
+
+                    <p>Income</p>
+
+                    <span id="chartIncome">
+                        ₹0
+                    </span>
+                </div>
+
+
+                <div class="chart-bar">
+                    <div id="expenseBar" class="bar expense-bar">
+                    </div>
+
+                    <p>Expense</p>
+
+                    <span id="chartExpense">
+                        ₹0
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Recent Transactions -->
+        <section class="transactions-section">
+
+            <div class="section-heading">
+                <h2>Recent Transactions</h2>
+
+                <button id="viewAllBtn">
+                    View All
+                </button>
+            </div>
+
+            <div id="transactionList">
+
+                <p class="empty-message">
+                    No transactions found.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

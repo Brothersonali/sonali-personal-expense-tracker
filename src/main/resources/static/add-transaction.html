@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Transaction | Personal Expense Tracker</title>
+
+    <link rel="stylesheet" href="add-transaction.css">
+</head>
+
+<body>
+
+    <div class="transaction-container">
+
+        <div class="logo">💰</div>
+
+        <h1>Add Transaction</h1>
+
+        <p class="subtitle">
+            Record your income or expense.
+        </p>
+
+        <form id="transactionForm">
+
+            <label for="title">Title</label>
+            <input
+                type="text"
+                id="title"
+                placeholder="e.g. Grocery Shopping"
+                required
+            >
+
+            <label for="amount">Amount</label>
+            <input
+                type="number"
+                id="amount"
+                placeholder="Enter amount"
+                required
+            >
+
+            <label for="type">Type</label>
+            <select id="type" required>
+                <option value="">Select Type</option>
+                <option value="INCOME">Income</option>
+                <option value="EXPENSE">Expense</option>
+            </select>
+
+            <label for="category">Category</label>
+            <input
+                type="text"
+                id="category"
+                placeholder="e.g. Food, Salary, Travel"
+                required
+            >
+
+            <label for="date">Date</label>
+            <input
+                type="date"
+                id="date"
+                required
+            >
+
+            <button type="submit">
+                Add Transaction
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+        <button
+            type="button"
+            class="back-btn"
+            onclick="window.location.href='dashboard.html'">
+            ← Back to Dashboard
+        </button>
+
+    </div>
+
+    <script src="add-transaction.js"></script>
+
+</body>
+</html>

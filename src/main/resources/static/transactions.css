@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f6;
+    min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background: white;
+    padding: 15px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e8f6f3;
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+.logo-section h2 {
+    color: #1f2937;
+    font-size: 20px;
+}
+
+.back-btn {
+    padding: 9px 16px;
+
+    border: 1px solid #16a085;
+    border-radius: 7px;
+
+    background: white;
+    color: #16a085;
+
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    background: #e8f6f3;
+}
+
+
+/* ================= MAIN ================= */
+
+.transactions-container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+}
+
+.page-heading {
+    margin-bottom: 25px;
+}
+
+.page-heading h1 {
+    color: #1f2937;
+    margin-bottom: 7px;
+}
+
+.page-heading p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* ================= FILTER ================= */
+
+.filter-section {
+    background: white;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.filter-section h2 {
+    color: #1f2937;
+    font-size: 18px;
+
+    margin-bottom: 15px;
+}
+
+.filter-controls {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+.filter-controls select,
+.filter-controls input {
+    flex: 1;
+
+    min-width: 180px;
+
+    padding: 11px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.filter-controls select:focus,
+.filter-controls input:focus {
+    border-color: #16a085;
+}
+
+.filter-controls button {
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+#filterBtn {
+    border: none;
+
+    background: #16a085;
+    color: white;
+}
+
+#filterBtn:hover {
+    background: #128f76;
+}
+
+#clearFilterBtn {
+    border: 1px solid #16a085;
+
+    background: white;
+    color: #16a085;
+}
+
+#clearFilterBtn:hover {
+    background: #e8f6f3;
+}
+
+
+/* ================= TRANSACTION LIST ================= */
+
+.transaction-list {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.transaction-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    background: #fafafa;
+}
+
+.transaction-item:last-child {
+    margin-bottom: 0;
+}
+
+.transaction-info h3 {
+    color: #1f2937;
+
+    font-size: 16px;
+
+    margin-bottom: 6px;
+}
+
+.transaction-info p {
+    color: #6b7280;
+
+    font-size: 13px;
+
+    margin-bottom: 3px;
+}
+
+.transaction-right {
+    text-align: right;
+}
+
+.transaction-right .amount {
+    display: block;
+
+    color: #1f2937;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+.transaction-right .type {
+    font-size: 13px;
+
+    text-transform: capitalize;
+}
+
+
+/* ================= ACTION BUTTONS ================= */
+
+.action-buttons {
+    margin-top: 10px;
+
+    display: flex;
+
+    gap: 8px;
+
+    justify-content: flex-end;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 6px 12px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+.edit-btn {
+    border: 1px solid #16a085;
+
+    background: white;
+
+    color: #16a085;
+}
+
+.edit-btn:hover {
+    background: #e8f6f3;
+}
+
+.delete-btn {
+    border: 1px solid #e74c3c;
+
+    background: white;
+
+    color: #e74c3c;
+}
+
+.delete-btn:hover {
+    background: #fdecea;
+}
+
+
+/* ================= EMPTY MESSAGE ================= */
+
+.empty-message {
+    text-align: center;
+
+    padding: 40px;
+
+    color: #6b7280;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .logo-section h2 {
+        font-size: 17px;
+    }
+
+    .transactions-container {
+        width: 94%;
+
+        margin: 25px auto;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+    }
+
+    .filter-controls select,
+    .filter-controls input {
+        width: 100%;
+
+        min-width: 100%;
+    }
+
+    .filter-controls button {
+        width: 100%;
+    }
+
+    .transaction-item {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .transaction-right {
+        width: 100%;
+
+        text-align: left;
+    }
+
+    .action-buttons {
+        justify-content: flex-start;
+    }
+}
